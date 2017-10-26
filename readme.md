@@ -60,8 +60,11 @@ curl -X POST \
 ```
 
 ### Reference
+
 https://github.com/jaredhanson/oauth2orize
+
 https://github.com/scottksmith95/beerlocker/tree/master/beerlocker-4
+
 http://scottksmith.com/blog/2014/07/02/beer-locker-building-a-restful-api-with-node-oauth2-server/
 
 
