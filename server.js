@@ -39,9 +39,9 @@ app.use(passport.initialize());
 var router = express.Router();
 
 // Create endpoint handlers for /users
-router.route('/users')
-  .post(userController.postUsers)
-  .get(authController.isAuthenticated, userController.getUsers);
+router.route('/user')
+  .post(userController.postUser)
+  .get(authController.isAuthenticated, userController.getUser);
 
 
 // Create endpoint handlers for /clients

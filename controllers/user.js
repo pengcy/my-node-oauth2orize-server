@@ -2,7 +2,7 @@
 var User = require('../models/user');
 
 // Create endpoint /api/users for POST
-exports.postUsers = function(req, res) {
+exports.postUser = function(req, res) {
   var user = new User({
     username: req.body.username,
     password: req.body.password
@@ -17,11 +17,14 @@ exports.postUsers = function(req, res) {
 };
 
 // Create endpoint /api/users for GET
-exports.getUsers = function(req, res) {
-  User.find(function(err, users) {
+exports.getUser = function(req, res) {
+  User.find(function(err, returnedUser) {
     if (err)
       return res.send(err);
 
-    res.json(users);
+    console.log(returnedUser);
+    var user = {};
+    user.username = returnedUser[0].username;
+    res.json(user);
   });
 };

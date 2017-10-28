@@ -16,7 +16,7 @@ node server.js
 ### Add user
 ```
 curl -X POST \
-  http://localhost:3333/api/users \
+  http://localhost:3333/api/user \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'username=amy&password=123456'
@@ -57,6 +57,15 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'code=y4tXJ88cVvbPn6Wb&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3333'
+```
+
+
+### Use the access token to get user object
+```
+curl -X GET \
+  http://localhost:3333/api/user \
+  -H 'authorization: Bearer oJBfgocp5DneO5NCPvOsY9ZcjX89rWRS9WAb0RPqimqJzwV0AWeGwA2fTguGECMoYuJadfPr9wWL0ZgyLntJdIScrMp5pQQYnnGRr9I0S0CoU0uCzyfB2xgbxl7uaXEhGVHxSmheNiwkTL3GbQqc7PM3y1Jeny7ysWSu1byjGE7vhU2JVyBlVIsktJu55cZMMCKnzzERCisJliHKFmb5bwBF02vgdf1nM6tejV8rIhmawyUzENIsQJa4CD4wEyO9' \
+  -H 'cache-control: no-cache' \
 ```
 
 ### Reference
